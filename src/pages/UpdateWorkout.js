@@ -15,7 +15,7 @@ export default function UpdateWorkout() {
         // Fetch the existing workout details
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:4000/workouts/getMyWorkouts', {
+        fetch('https://fitnessapi-mozo.onrender.com/workouts/getMyWorkouts', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -50,7 +50,7 @@ export default function UpdateWorkout() {
 
         const token = localStorage.getItem('token');
 
-        fetch(`http://localhost:4000/workouts/updateWorkout/${id}`, {
+        fetch(`https://fitnessapi-mozo.onrender.com/workouts/updateWorkout/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

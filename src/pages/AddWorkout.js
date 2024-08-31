@@ -12,7 +12,7 @@ export default function AddWorkout() {
         e.preventDefault();
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:4000/workouts/addWorkout', {
+        fetch('https://fitnessapi-mozo.onrender.com/workouts/addWorkout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

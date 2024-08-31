@@ -11,7 +11,7 @@ export default function GetWorkouts() {
     useEffect(() => {
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:4000/workouts/getMyWorkouts', {
+        fetch('https://fitnessapi-mozo.onrender.com/workouts/getMyWorkouts', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -41,7 +41,7 @@ export default function GetWorkouts() {
     const handleDelete = (id) => {
         const token = localStorage.getItem('token');
 
-        fetch(`http://localhost:4000/workouts/deleteWorkout/${id}`, {
+        fetch(`https://fitnessapi-mozo.onrender.com/workouts/deleteWorkout/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -78,7 +78,7 @@ export default function GetWorkouts() {
         const token = localStorage.getItem('token');
         const newStatus = currentStatus === 'pending' ? 'completed' : 'pending';
 
-        fetch(`http://localhost:4000/workouts/completeWorkoutStatus/${id}`, {
+        fetch(`https://fitnessapi-mozo.onrender.com/workouts/completeWorkoutStatus/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

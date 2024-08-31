@@ -22,7 +22,7 @@ export default function Login() {
     function authenticate(e) {
         e.preventDefault(); // Prevents page redirection via form submission
 
-        fetch('http://localhost:4000/users/login', {
+        fetch('https://fitnessapi-mozo.onrender.com/users/login', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -62,7 +62,7 @@ export default function Login() {
     }
 
     const retrieveUserDetails = (token) => {
-        fetch('http://localhost:4000/users/details', {
+        fetch('https://fitnessapi-mozo.onrender.com/users/details', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
